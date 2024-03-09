@@ -16,3 +16,9 @@ yaletown = Store.create(name: "Yaletown", annual_revenue: 430000, mens_apparel: 
 for store in @mens_stores do
   puts "#{store.name}: #{store.annual_revenue}"
 end
+
+@womens_stores = Store.where(womens_apparel: true)
+
+for store in @womens_stores do
+  puts "#{store.name}: #{store.annual_revenue}"
+end
